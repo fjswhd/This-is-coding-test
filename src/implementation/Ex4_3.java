@@ -19,12 +19,18 @@ public class Ex4_3 {
 		int[] dx = {-2, -2, 2, 2, 1, -1, 1, -1};
 		int[] dy = {1, -1, 1, -1, 2, 2, -2, -2};
 		
+		//위처럼 두개로 나눌 수도 있지만 2차원 배열로 한꺼번에 쓸 수도 있다.
+		int[][] moves = {
+				{2, 1}, {2, -1}, {-2, 1}, {-2, -1}, {1, 2}, {-1, 2}, {1, -2}, {-1, -2}
+		};
+		
 		//움직이고 범위를 벗어나면 카운트하지 않음
 		int answer = 0;
 		
-		for (int i = 0; i < dx.length; i++) {
-			int newX = x + dx[i];
-			int newY = y + dy[i];
+		for (int i = 0; i < moves.length; i++) {
+			int[] move = moves[i];
+			int newX = x + move[0];
+			int newY = y + move[1];
 			
 			if (newX < 1 || newX > 8 || newY < 1 || newY > 8) {
 				continue;
