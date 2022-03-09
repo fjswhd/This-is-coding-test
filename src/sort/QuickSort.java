@@ -7,7 +7,7 @@ public class QuickSort {
 		int[] numbers = {5, 7, 9, 0, 3, 1, 6, 2, 4, 8, 5, 3, 4};
 		
 		quickSort(numbers, 0, numbers.length - 1);
-		
+		System.out.println(Arrays.binarySearch(numbers, 5));
 		
 		System.out.println(Arrays.toString(numbers));
 	}
